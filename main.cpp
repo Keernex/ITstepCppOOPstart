@@ -101,15 +101,99 @@ int main()
 		}
 		if (select == 4)
 		{
+			if (size_fractions < 2)
+			{
+				continue;
+			}
+			int f1;
+			cout << "(index)input number first fraction: ";
+			while (!(std::cin >> f1))
+			{
+				cout << "input number first fraction: ";
+				cin.clear();
+				while (cin.get() != '\n')
+					continue;
+			}
 
+			int f2;
+			cout << "(index)input number second fraction: ";
+			while (!(std::cin >> f2))
+			{
+				cout << "input number second fraction: ";
+				cin.clear();
+				while (cin.get() != '\n')
+					continue;
+			}
+			int n1 = fraction[f1].get_numerator();
+			int d1 = fraction[f1].get_denominator();
+			int n2 = fraction[f2].get_numerator();
+			int d2 = fraction[f2].get_denominator();
+
+			fraction_funk.fraction_subtraction(n1, d1, n2, d2);
 		}
 		if (select == 5)
 		{
+			if (size_fractions < 2)
+			{
+				continue;
+			}
+			int f1;
+			cout << "(index)input number first fraction: ";
+			while (!(std::cin >> f1))
+			{
+				cout << "input number first fraction: ";
+				cin.clear();
+				while (cin.get() != '\n')
+					continue;
+			}
 
+			int f2;
+			cout << "(index)input number second fraction: ";
+			while (!(std::cin >> f2))
+			{
+				cout << "input number second fraction: ";
+				cin.clear();
+				while (cin.get() != '\n')
+					continue;
+			}
+			int n1 = fraction[f1].get_numerator();
+			int d1 = fraction[f1].get_denominator();
+			int n2 = fraction[f2].get_numerator();
+			int d2 = fraction[f2].get_denominator();
+
+			fraction_funk.fraction_multiplication(n1, d1, n2, d2);
 		}
 		if (select == 6)
 		{
+			if (size_fractions < 2)
+			{
+				continue;
+			}
+			int f1;
+			cout << "(index)input number first fraction: ";
+			while (!(std::cin >> f1))
+			{
+				cout << "input number first fraction: ";
+				cin.clear();
+				while (cin.get() != '\n')
+					continue;
+			}
 
+			int f2;
+			cout << "(index)input number second fraction: ";
+			while (!(std::cin >> f2))
+			{
+				cout << "input number second fraction: ";
+				cin.clear();
+				while (cin.get() != '\n')
+					continue;
+			}
+			int n1 = fraction[f1].get_numerator();
+			int d1 = fraction[f1].get_denominator();
+			int n2 = fraction[f2].get_numerator();
+			int d2 = fraction[f2].get_denominator();
+
+			fraction_funk.fraction_division(n1, d1, n2, d2);
 		}
 		if (select == 7)
 		{
