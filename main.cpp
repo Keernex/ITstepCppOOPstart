@@ -75,6 +75,7 @@ int main()
         {
             for (int i = 0; i < size_students; i++)
             {
+                cout << "Student " << i+1 << endl;
                 cout << "name: " << student[i].get_name() << endl;
                 cout << "surname: " << student[i].get_surname() << endl;
                 cout << "father name: " << student[i].get_father_name() << endl;
