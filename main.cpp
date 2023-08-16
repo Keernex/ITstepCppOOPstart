@@ -8,7 +8,7 @@ int main()
 	int size_points = 0;
 	string filename = "Points.bin";
 
-
+	
 
 }
 
