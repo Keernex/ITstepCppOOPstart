@@ -1,17 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Исходные файлы">
+    <Filter Include="data">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Файлы заголовков">
+    <Filter Include="domain">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Файлы ресурсов">
+    <Filter Include="main">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="domain\models">
+      <UniqueIdentifier>{d1b7d5a6-9bc3-4131-a155-475e1fe165a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\files">
+      <UniqueIdentifier>{41645934-e9b1-4fb8-8b49-843b9ab431f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\files\file_all_functions">
+      <UniqueIdentifier>{b1952bb2-af21-4bf8-800b-8fbd6e44e894}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="point.cpp">
+      <Filter>domain\models</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="file_all_functions.cpp">
+      <Filter>data\files\file_all_functions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="point.h">
+      <Filter>domain\models</Filter>
+    </ClInclude>
+    <ClInclude Include="lib.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="file_all_functions.h">
+      <Filter>data\files\file_all_functions</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
