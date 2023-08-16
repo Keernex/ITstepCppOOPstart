@@ -1,7 +1,10 @@
 #include "lib.h"
 
 
-class Points
+class Point
+{
+
+};
 
 
 

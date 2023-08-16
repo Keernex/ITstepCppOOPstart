@@ -2,6 +2,7 @@
 #define FILE_ALL_FUNCTIONS_H
 
 #include "lib.h"
+#include "point.h"
 
 
 struct FileAllFunctions

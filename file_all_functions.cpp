@@ -24,7 +24,7 @@ bool FileAllFunctions::Check_file_empty(string filename)
 
 
 
-bool FileAllFunctions::save_elements(vector<Managers> items, int count, string filename)
+bool FileAllFunctions::save_elements(vector<> items, int count, string filename)
 {
 	file.open(filename, ios::out | ios::binary);
 	if (file.is_open())
@@ -32,7 +32,7 @@ bool FileAllFunctions::save_elements(vector<Managers> items, int count, string f
 		file.write((char*)&count, sizeof(int));
 		for (size_t i = 0; i < count; i++)
 		{
-			file.write((char*)&items[i], sizeof(Managers));
+			file.write((char*)&items[i], sizeof());
 		}
 		file.close();
 		cout << "Person was saved..." << endl;
@@ -45,7 +45,7 @@ bool FileAllFunctions::save_elements(vector<Managers> items, int count, string f
 	}
 }
 
-bool FileAllFunctions::load_elements(vector<Managers>& items, int& count, string filename)
+bool FileAllFunctions::load_elements(vector<>& items, int& count, string filename)
 {
 	file.open(filename, ios::in | ios::binary);
 	file.read((char*)&count, sizeof(int));
@@ -54,7 +54,7 @@ bool FileAllFunctions::load_elements(vector<Managers>& items, int& count, string
 	{
 		for (size_t i = 0; i < count; i++)
 		{
-			file.read((char*)&items[i], sizeof(Managers));
+			file.read((char*)&items[i], sizeof());
 		}
 		file.close();
 		return true;
