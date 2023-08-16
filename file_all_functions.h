@@ -11,8 +11,8 @@ struct FileAllFunctions
 
 	bool Check_file_empty(string filename);
 
-	bool save_elements(vector<> items, int count, string filename);
-	bool load_elements(vector<>& items, int& count, string filename);
+	bool save_elements(vector<Point> items, int count, string filename);
+	bool load_elements(vector<Point>& items, int& count, string filename);
 };
 
 
