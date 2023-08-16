@@ -46,6 +46,14 @@ void Point::print_point()
 {
     cout << "(" << x << "," << y << "," << z << ")" << endl;
 }
+vector<Point> Point::remove_point(vector<Point> point, int index)
+{
+    if (index >= 0 && index < point.size())
+    {
+        point.erase(point.begin() + index);
+    }
+    return point;
+}
 
 
 

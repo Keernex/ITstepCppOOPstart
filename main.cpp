@@ -145,10 +145,9 @@ int main()
                     continue;
             }
 
-            point[index].~Point();
-
+            point = funk_point.remove_point(point, index);
             size_points--;
-            point.resize(size_points);
+            //file_all_functions.save_elements(point, count_managers, file_point);
         }
         if (select == 5)
         {

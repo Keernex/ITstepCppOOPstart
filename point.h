@@ -21,4 +21,5 @@ public:
     void setZ(int z);
 
     void print_point();
+    vector<Point> remove_point(vector<Point> point, int index);
 };
