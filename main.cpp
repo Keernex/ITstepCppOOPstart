@@ -86,7 +86,7 @@ int main()
 
             int index;
             cout << "input index point: ";
-            while (!(std::cin >> index) || index < size_points || index > size_points)
+            while (!(std::cin >> index) || index < 0 || index > size_points-1)
             {
                 cout << "input index point: ";
                 cin.clear();
@@ -137,7 +137,7 @@ int main()
 
             int index;
             cout << "input index point: ";
-            while (!(std::cin >> index) || index < size_points || index > size_points)
+            while (!(std::cin >> index) || index < 0 || index > size_points - 1)
             {
                 cout << "input index point: ";
                 cin.clear();
@@ -146,6 +146,9 @@ int main()
             }
 
             point[index].~Point();
+
+            size_points--;
+            point.resize(size_points);
         }
         if (select == 5)
         {
