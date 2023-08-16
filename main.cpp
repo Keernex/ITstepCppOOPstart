@@ -79,9 +79,14 @@ int main()
         }
         if (select == 3)
         {
-            int select;
+            if (size_points == 0)
+            {
+                continue;
+            }
+
+            int index;
             cout << "input index point: ";
-            while (!(std::cin >> select) || select < 1 || select > 5)
+            while (!(std::cin >> index) || index < size_points || index > size_points)
             {
                 cout << "input index point: ";
                 cin.clear();
@@ -89,19 +94,58 @@ int main()
                     continue;
             }
 
+            int x;
+            cout << "input x: ";
+            while (!(std::cin >> x))
+            {
+                cout << "input x: ";
+                cin.clear();
+                while (cin.get() != '\n')
+                    continue;
+            }
 
+            int y;
+            cout << "input y: ";
+            while (!(std::cin >> y))
+            {
+                cout << "input y: ";
+                cin.clear();
+                while (cin.get() != '\n')
+                    continue;
+            }
 
+            int z;
+            cout << "input z: ";
+            while (!(std::cin >> z))
+            {
+                cout << "input z: ";
+                cin.clear();
+                while (cin.get() != '\n')
+                    continue;
+            }
 
-
-
+            point[index].setX(x);
+            point[index].setY(y);
+            point[index].setZ(z);
         }
         if (select == 4)
         {
-            for (int i = 0; i < size_points; i++)
+            if (size_points == 0)
             {
-                cout << "Point " << i + 1 << endl;
-                point[i].print_point();
+                continue;
             }
+
+            int index;
+            cout << "input index point: ";
+            while (!(std::cin >> index) || index < size_points || index > size_points)
+            {
+                cout << "input index point: ";
+                cin.clear();
+                while (cin.get() != '\n')
+                    continue;
+            }
+
+            point[index].~Point();
         }
         if (select == 5)
         {
