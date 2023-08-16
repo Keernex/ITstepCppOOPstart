@@ -10,8 +10,10 @@ int main()
 	int size_points = 0;
 	string filename_point = "Points.bin";
 
-
-    //load+chack
+    if (file_all_functions.Check_file_empty(filename_point))
+    {
+        file_all_functions.load_elements(point, size_points, filename_point);
+    }
 
     do
     {
