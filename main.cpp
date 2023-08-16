@@ -1,12 +1,14 @@
 #include "lib.h"
-#include "point.h"
+#include "file_all_functions.h"
 
 int main()
 {
+    FileAllFunctions file_all_functions;
+
 	Point funk_point;
 	vector<Point> point;
 	int size_points = 0;
-	string filename = "Points.bin";
+	string filename_point = "Points.bin";
 
 
     //load+chack
@@ -68,6 +70,8 @@ int main()
             point[size_points - 1].setX(x);
             point[size_points - 1].setY(y);
             point[size_points - 1].setZ(z);
+
+            file_all_functions.save_elements(point, size_points, filename_point);
         }
         if (select == 2)
         {
@@ -127,6 +131,8 @@ int main()
             point[index].setX(x);
             point[index].setY(y);
             point[index].setZ(z);
+
+            file_all_functions.save_elements(point, size_points, filename_point);
         }
         if (select == 4)
         {
@@ -147,7 +153,7 @@ int main()
 
             point = funk_point.remove_point(point, index);
             size_points--;
-            //file_all_functions.save_elements(point, count_managers, file_point);
+            file_all_functions.save_elements(point, size_points, filename_point);
         }
         if (select == 5)
         {
