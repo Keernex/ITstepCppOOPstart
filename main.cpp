@@ -17,7 +17,7 @@ int main()
 
         int select;
         cout << "input number: ";
-        while (!(std::cin >> select) || select < 1 || select > 7)
+        while (!(std::cin >> select) || select < 1 || select > 3)
         {
             cout << "input number: ";
             cin.clear();
