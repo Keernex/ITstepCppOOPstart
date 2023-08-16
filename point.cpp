@@ -42,7 +42,7 @@ void Point::setZ(int z)
 {
     this->z = z;
 }
-void Point::print()
+void Point::print_point()
 {
     cout << "(" << x << "," << y << "," << z << ")" << endl;
 }

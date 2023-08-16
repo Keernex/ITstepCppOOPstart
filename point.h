@@ -20,5 +20,5 @@ public:
     void setY(int y);
     void setZ(int z);
 
-    void print();
+    void print_point();
 };

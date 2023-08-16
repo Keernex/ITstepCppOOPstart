@@ -8,6 +8,9 @@ int main()
 	int size_points = 0;
 	string filename = "Points.bin";
 
+
+    //load+chack
+
     do
     {
         system("cls");
@@ -29,66 +32,78 @@ int main()
 
         if (select == 1)
         {
-            size_students++;
-            student.resize(size_students);
+            size_points++;
+            point.resize(size_points);
 
-            string name;
-            cout << "input name: ";
-            getline(cin, name);
+            int x;
+            cout << "input x: ";
+            while (!(std::cin >> x))
+            {
+                cout << "input x: ";
+                cin.clear();
+                while (cin.get() != '\n')
+                    continue;
+            }
 
-            string surname;
-            cout << "input surname: ";
-            getline(cin, surname);
+            int y;
+            cout << "input y: ";
+            while (!(std::cin >> y))
+            {
+                cout << "input y: ";
+                cin.clear();
+                while (cin.get() != '\n')
+                    continue;
+            }
 
-            string father_name;
-            cout << "input father name: ";
-            getline(cin, father_name);
+            int z;
+            cout << "input z: ";
+            while (!(std::cin >> z))
+            {
+                cout << "input z: ";
+                cin.clear();
+                while (cin.get() != '\n')
+                    continue;
+            }
 
-            string date_birth;
-            cout << "input date birth: ";
-            getline(cin, date_birth);
-
-            string telephone;
-            cout << "input telephone: ";
-            getline(cin, telephone);
-
-            string city;
-            cout << "input city: ";
-            getline(cin, city);
-
-            string country;
-            cout << "input country: ";
-            getline(cin, country);
-
-            string name_school;
-            cout << "input name school: ";
-            getline(cin, name_school);
-
-            student[size_students - 1].set_name(name);
-            student[size_students - 1].set_surname(surname);
-            student[size_students - 1].set_father_name(father_name);
-            student[size_students - 1].set_date_birth(date_birth);
-            student[size_students - 1].set_telephone(telephone);
-            student[size_students - 1].set_city(city);
-            student[size_students - 1].set_country(country);
-            student[size_students - 1].set_name_school(name_school);
+            point[size_points - 1].setX(x);
+            point[size_points - 1].setY(y);
+            point[size_points - 1].setZ(z);
         }
         if (select == 2)
         {
-            for (int i = 0; i < size_students; i++)
+            for (int i = 0; i < size_points; i++)
             {
-                cout << "Student " << i + 1 << endl;
-                cout << "name: " << student[i].get_name() << endl;
-                cout << "surname: " << student[i].get_surname() << endl;
-                cout << "father name: " << student[i].get_father_name() << endl;
-                cout << "date birth: " << student[i].get_date_birth() << endl;
-                cout << "telephone: " << student[i].get_telephone() << endl;
-                cout << "city: " << student[i].get_city() << endl;
-                cout << "country: " << student[i].get_country() << endl;
-                cout << "name school: " << student[i].get_name_school() << endl;
+                cout << "Point " << i + 1 << endl;
+                point[i].print_point();
             }
         }
         if (select == 3)
+        {
+            int select;
+            cout << "input index point: ";
+            while (!(std::cin >> select) || select < 1 || select > 5)
+            {
+                cout << "input index point: ";
+                cin.clear();
+                while (cin.get() != '\n')
+                    continue;
+            }
+
+
+
+
+
+
+        }
+        if (select == 4)
+        {
+            for (int i = 0; i < size_points; i++)
+            {
+                cout << "Point " << i + 1 << endl;
+                point[i].print_point();
+            }
+        }
+        if (select == 5)
         {
             break;
         }
