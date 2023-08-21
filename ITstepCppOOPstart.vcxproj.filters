@@ -1,17 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Исходные файлы">
+    <Filter Include="Data">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Файлы заголовков">
+    <Filter Include="Domain">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Файлы ресурсов">
+    <Filter Include="Main">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Domain\UseCase">
+      <UniqueIdentifier>{b9cdcbe3-9767-4ab8-a86a-29cd58b8654b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\UseCase\ReservoirEngine">
+      <UniqueIdentifier>{3a21d9a0-fe44-4e92-9f22-cc75aa0cc459}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Models">
+      <UniqueIdentifier>{955038e8-c631-4bee-a263-4ec15219f491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Models\Reservoir">
+      <UniqueIdentifier>{08e2a070-63f1-4bb2-990d-a37f4ca24038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\Files">
+      <UniqueIdentifier>{32a2df22-9301-4e5e-8aa3-162fc6f945a7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="ReservoirEngine.cpp">
+      <Filter>Domain\UseCase\ReservoirEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Reservoir.cpp">
+      <Filter>Domain\Models\Reservoir</Filter>
+    </ClCompile>
+    <ClCompile Include="ReservoirFiles.cpp">
+      <Filter>Data\Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="ReservoirEngine.h">
+      <Filter>Domain\UseCase\ReservoirEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Reservoir.h">
+      <Filter>Domain\Models\Reservoir</Filter>
+    </ClInclude>
+    <ClInclude Include="ReservoirFiles.h">
+      <Filter>Data\Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
