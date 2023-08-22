@@ -65,6 +65,13 @@ public:
     inline void setY(int y) { this->y = y; }
     inline void setZ(int z) { this->z = z; }
 
+    inline void topZ() { z++; }
+    inline void bottomZ(int y) { z--; }
+    inline void leftX(int z) { x++; }
+    inline void rightX(int x) { x--; }
+    inline void beforeY(int y) { x++; }
+    inline void backY(int z) { x--; }
+
     void print_DroneSpace();
 };
 

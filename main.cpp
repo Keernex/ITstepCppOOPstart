@@ -23,11 +23,12 @@ int main()
         cout << "2 - print drone" << endl;
         cout << "3 - change drone" << endl;
         cout << "4 - delete drone" << endl;
-        cout << "5 - end" << endl;
+        cout << "5 - control drone" << endl;
+        cout << "6 - end" << endl;
 
         int select;
         cout << "input number: ";
-        while (!(std::cin >> select) || select < 1 || select > 5)
+        while (!(std::cin >> select) || select < 1 || select > 6)
         {
             cout << "input number: ";
             cin.clear();
@@ -98,7 +99,6 @@ int main()
 
             droneFile.save_elements(drones, size_drones, filename_drone);
         }
-
         if (select == 2)
         {
             for (int i = 0; i < size_drones; i++)
@@ -204,6 +204,38 @@ int main()
             droneFile.save_elements(drones, size_drones, filename_drone);
         }
         if (select == 5)
+        {
+            do
+            {
+                system("cls");
+                cout << "1 - top drone" << endl;
+                cout << "2 - bottom drone" << endl;
+                cout << "3 - left drone" << endl;
+                cout << "4 - right drone" << endl;
+                cout << "5 - before drone" << endl;
+                cout << "6 - back drone" << endl;
+                cout << "7 - end" << endl;
+
+                int select;
+                cout << "input number: ";
+                while (!(std::cin >> select) || select < 1 || select > 7)
+                {
+                    cout << "input number: ";
+                    cin.clear();
+                    while (cin.get() != '\n')
+                        continue;
+                }
+                if (select == 1)
+                {
+                    cout << "ddddd" << endl;
+                    droneSpace.z++;
+                }
+
+                getchar();
+                _getch();
+            } while (true);
+        }
+        if (select == 6)
         {
             break;
         }
