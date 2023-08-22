@@ -217,20 +217,55 @@ int main()
                 cout << "7 - end" << endl;
 
                 int select;
-                cout << "input number: ";
+                cout << "(control) input number: ";
                 while (!(std::cin >> select) || select < 1 || select > 7)
                 {
-                    cout << "input number: ";
+                    cout << "(control) input number: ";
                     cin.clear();
                     while (cin.get() != '\n')
                         continue;
                 }
                 if (select == 1)
                 {
-                    cout << "ddddd" << endl;
-                    droneSpace.z++;
+                    cout << "The drone rises one inch" << endl;
+                    cout << "The drone rises one inch" << endl;
+                    droneSpace.topZ();
+                    droneSpace.print_DroneSpace();
                 }
-
+                if (select == 2)
+                {
+                    cout << "ddddd" << endl;
+                    droneSpace.bottomZ();
+                    droneSpace.print_DroneSpace();
+                }
+                if (select == 3)
+                {
+                    cout << "ddddd" << endl;
+                    droneSpace.leftX();
+                    droneSpace.print_DroneSpace();
+                }
+                if (select == 4)
+                {
+                    cout << "ddddd" << endl;
+                    droneSpace.rightX();
+                    droneSpace.print_DroneSpace();
+                }
+                if (select == 5)
+                {
+                    cout << "ddddd" << endl;
+                    droneSpace.beforeY();
+                    droneSpace.print_DroneSpace();
+                }
+                if (select == 6)
+                {
+                    cout << "ddddd" << endl;
+                    droneSpace.backY();
+                    droneSpace.print_DroneSpace();
+                }
+                if (select == 7)
+                {
+                    break
+                }
                 getchar();
                 _getch();
             } while (true);
