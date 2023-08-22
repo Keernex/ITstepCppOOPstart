@@ -103,6 +103,7 @@ int main()
         {
             for (int i = 0; i < size_drones; i++)
             {
+                cout << endl << endl;
                 cout << "Drone " << i + 1 << endl;
                 drones[i].printDrone();
             }
