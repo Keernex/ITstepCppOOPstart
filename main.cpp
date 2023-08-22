@@ -229,38 +229,37 @@ int main()
                 }
                 if (select == 1)
                 {
-                    cout << "The drone rises one inch" << endl;
-                    cout << "The drone rises one inch" << endl;
+                    cout << "Performing ascent by 1 inch..." << endl;
                     droneSpace.topZ();
                     droneSpace.print_DroneSpace();
                 }
                 if (select == 2)
                 {
-                    cout << "ddddd" << endl;
+                    cout << "Performing descent..." << endl;
                     droneSpace.bottomZ();
                     droneSpace.print_DroneSpace();
                 }
                 if (select == 3)
                 {
-                    cout << "ddddd" << endl;
+                    cout << "Moving left..." << endl;
                     droneSpace.leftX();
                     droneSpace.print_DroneSpace();
                 }
                 if (select == 4)
                 {
-                    cout << "ddddd" << endl;
+                    cout << "Moving right..." << endl;
                     droneSpace.rightX();
                     droneSpace.print_DroneSpace();
                 }
                 if (select == 5)
                 {
-                    cout << "ddddd" << endl;
+                    cout << "Moving forward..." << endl;
                     droneSpace.beforeY();
                     droneSpace.print_DroneSpace();
                 }
                 if (select == 6)
                 {
-                    cout << "ddddd" << endl;
+                    cout << "Moving backward..." << endl;
                     droneSpace.backY();
                     droneSpace.print_DroneSpace();
                 }
