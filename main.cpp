@@ -11,10 +11,10 @@ int main()
     int size_drones = 0;
     string filename_drone = "Drones.bin";
 
-    if (droneFile.Check_file_empty(filename_drone))
-    {
-        droneFile.load_elements(drones, size_drones, filename_drone);
-    }
+    //if (droneFile.Check_file_empty(filename_drone))
+    //{
+    //    droneFile.load_elements(drones, size_drones, filename_drone);
+    //}
 
     do
     {
@@ -40,6 +40,7 @@ int main()
         {
             size_drones++;
             drones.resize(size_drones);
+
 
             string name;
             string size;
@@ -97,7 +98,7 @@ int main()
             cin >> weight;
             drones[size_drones - 1].setWeight(weight);
 
-            droneFile.save_elements(drones, size_drones, filename_drone);
+            /*droneFile.save_elements(drones, size_drones, filename_drone);*/
         }
         if (select == 2)
         {
@@ -181,7 +182,7 @@ int main()
             cin >> weight;
             drones[index].setWeight(weight);
 
-            droneFile.save_elements(drones, size_drones, filename_drone);
+            /*droneFile.save_elements(drones, size_drones, filename_drone);*/
         }
         if (select == 4)
         {
@@ -202,7 +203,7 @@ int main()
 
             drones = drone.removeDrone(drones, index);
             size_drones--;
-            droneFile.save_elements(drones, size_drones, filename_drone);
+            /*droneFile.save_elements(drones, size_drones, filename_drone);*/
         }
         if (select == 5)
         {
