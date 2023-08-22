@@ -1,18 +1,18 @@
-#include "lib.h"
-#include "file_all_functions.h"
+#include "DroneFile.h"
 
 int main()
 {
-    FileAllFunctions file_all_functions;
+    DroneFile droneFile;
+    DroneEngine droneEngine;
+    Drone drone;
 
-    Point funk_point;
-    vector<Point> point;
-    int size_points = 0;
-    string filename_point = "Points.bin";
+    vector<Drone> drones;
+    int size_drones = 0;
+    string filename_drone = "Drones.bin";
 
-    if (file_all_functions.Check_file_empty(filename_point))
+    if (droneFile.Check_file_empty(filename_drone))
     {
-        file_all_functions.load_elements(point, size_points, filename_point);
+        droneFile.load_elements(drones, size_drones, filename_drone);
     }
 
     do
@@ -36,51 +36,74 @@ int main()
 
         if (select == 1)
         {
-            size_points++;
-            point.resize(size_points);
+            size_drones++;
+            drones.resize(size_drones);
 
-            int x;
-            cout << "input x: ";
-            while (!(std::cin >> x))
-            {
-                cout << "input x: ";
-                cin.clear();
-                while (cin.get() != '\n')
-                    continue;
-            }
+            string name;
+            string size;
+            string type;
+            string ready_model;
+            string max_speed;
+            string control_type;
+            string engine_type;
+            string charging_time;
+            string flight_time;
+            string flight_height;
+            string weight;
 
-            int y;
-            cout << "input y: ";
-            while (!(std::cin >> y))
-            {
-                cout << "input y: ";
-                cin.clear();
-                while (cin.get() != '\n')
-                    continue;
-            }
+            cout << "Enter name: ";
+            cin >> name;
+            drones[size_drones - 1].setName(name);
 
-            int z;
-            cout << "input z: ";
-            while (!(std::cin >> z))
-            {
-                cout << "input z: ";
-                cin.clear();
-                while (cin.get() != '\n')
-                    continue;
-            }
+            cout << "Enter size: ";
+            cin >> size;
+            drones[size_drones - 1].setSize(size);
 
-            point[size_points - 1].setX(x);
-            point[size_points - 1].setY(y);
-            point[size_points - 1].setZ(z);
+            cout << "Enter type: ";
+            cin >> type;
+            drones[size_drones - 1].setType(type);
 
-            file_all_functions.save_elements(point, size_points, filename_point);
+            cout << "Enter ready model: ";
+            cin >> ready_model;
+            drones[size_drones - 1].setReady_model(ready_model);
+
+            cout << "Enter max speed: ";
+            cin >> max_speed;
+            drones[size_drones - 1].setMax_speed(max_speed);
+
+            cout << "Enter control type: ";
+            cin >> control_type;
+            drones[size_drones - 1].setControl_type(control_type);
+
+            cout << "Enter engine type: ";
+            cin >> engine_type;
+            drones[size_drones - 1].setEngine_type(engine_type);
+
+            cout << "Enter charging time: ";
+            cin >> charging_time;
+            drones[size_drones - 1].setCharging_time(charging_time);
+
+            cout << "Enter flight time: ";
+            cin >> flight_time;
+            drones[size_drones - 1].setFlight_time(flight_time);
+
+            cout << "Enter flight height: ";
+            cin >> flight_height;
+            drones[size_drones - 1].setFlight_height(flight_height);
+
+            cout << "Enter weight: ";
+            cin >> weight;
+            drones[size_drones - 1].setWeight(weight);
+
+            droneFile.save_elements(drones, size_drones, filename_drone);
         }
+
         if (select == 2)
         {
-            for (int i = 0; i < size_points; i++)
+            for (int i = 0; i < size_drones; i++)
             {
-                cout << "Point " << i + 1 << endl;
-                point[i].print_point();
+                cout << "Drone " << i + 1 << endl;
+                droneEngine.ShowDrone(drones[i]);
             }
         }
         if (select == 3)

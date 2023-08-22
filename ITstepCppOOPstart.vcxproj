@@ -130,13 +130,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Drone.cpp" />
     <ClCompile Include="DroneEngine.cpp" />
-    <ClCompile Include="DroneFiles.cpp" />
+    <ClCompile Include="DroneFile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib.h" />
     <ClInclude Include="Drone.h" />
     <ClInclude Include="DroneEngine.h" />
-    <ClInclude Include="DroneFiles.h" />
+    <ClInclude Include="DroneFile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
