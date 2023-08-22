@@ -42,4 +42,6 @@ public:
     inline void setFlight_height(string flight_height) { this->flight_height = flight_height; }
     inline void setWeight(string weight) { this->weight = weight; }
 
+    void printDrone();
+    vector<Drone> removeDrone(vector<Drone> items, int index);
 };

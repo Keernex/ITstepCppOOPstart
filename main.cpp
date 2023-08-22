@@ -103,19 +103,19 @@ int main()
             for (int i = 0; i < size_drones; i++)
             {
                 cout << "Drone " << i + 1 << endl;
-                droneEngine.ShowDrone(drones[i]);
+                drones[i].printDrone();
             }
         }
         if (select == 3)
         {
-            if (size_points == 0)
+            if (size_drones == 0)
             {
                 continue;
             }
 
             int index;
             cout << "input index point: ";
-            while (!(std::cin >> index) || index < 0 || index > size_points - 1)
+            while (!(std::cin >> index) || index < 0 || index > size_drones - 1)
             {
                 cout << "input index point: ";
                 cin.clear();
@@ -123,52 +123,74 @@ int main()
                     continue;
             }
 
-            int x;
-            cout << "input x: ";
-            while (!(std::cin >> x))
-            {
-                cout << "input x: ";
-                cin.clear();
-                while (cin.get() != '\n')
-                    continue;
-            }
+            string name;
+            string size;
+            string type;
+            string ready_model;
+            string max_speed;
+            string control_type;
+            string engine_type;
+            string charging_time;
+            string flight_time;
+            string flight_height;
+            string weight;
 
-            int y;
-            cout << "input y: ";
-            while (!(std::cin >> y))
-            {
-                cout << "input y: ";
-                cin.clear();
-                while (cin.get() != '\n')
-                    continue;
-            }
+            cout << "Enter name: ";
+            cin >> name;
+            drones[index].setName(name);
 
-            int z;
-            cout << "input z: ";
-            while (!(std::cin >> z))
-            {
-                cout << "input z: ";
-                cin.clear();
-                while (cin.get() != '\n')
-                    continue;
-            }
+            cout << "Enter size: ";
+            cin >> size;
+            drones[index].setSize(size);
 
-            point[index].setX(x);
-            point[index].setY(y);
-            point[index].setZ(z);
+            cout << "Enter type: ";
+            cin >> type;
+            drones[index].setType(type);
 
-            file_all_functions.save_elements(point, size_points, filename_point);
+            cout << "Enter ready model: ";
+            cin >> ready_model;
+            drones[index].setReady_model(ready_model);
+
+            cout << "Enter max speed: ";
+            cin >> max_speed;
+            drones[index].setMax_speed(max_speed);
+
+            cout << "Enter control type: ";
+            cin >> control_type;
+            drones[index].setControl_type(control_type);
+
+            cout << "Enter engine type: ";
+            cin >> engine_type;
+            drones[index].setEngine_type(engine_type);
+
+            cout << "Enter charging time: ";
+            cin >> charging_time;
+            drones[index].setCharging_time(charging_time);
+
+            cout << "Enter flight time: ";
+            cin >> flight_time;
+            drones[index].setFlight_time(flight_time);
+
+            cout << "Enter flight height: ";
+            cin >> flight_height;
+            drones[index].setFlight_height(flight_height);
+
+            cout << "Enter weight: ";
+            cin >> weight;
+            drones[index].setWeight(weight);
+
+            droneFile.save_elements(drones, size_drones, filename_drone);
         }
         if (select == 4)
         {
-            if (size_points == 0)
+            if (size_drones == 0)
             {
                 continue;
             }
 
             int index;
             cout << "input index point: ";
-            while (!(std::cin >> index) || index < 0 || index > size_points - 1)
+            while (!(std::cin >> index) || index < 0 || index > size_drones - 1)
             {
                 cout << "input index point: ";
                 cin.clear();
@@ -176,9 +198,9 @@ int main()
                     continue;
             }
 
-            point = funk_point.remove_point(point, index);
-            size_points--;
-            file_all_functions.save_elements(point, size_points, filename_point);
+            drones = drone.removeDrone(drones, index);
+            size_drones--;
+            droneFile.save_elements(drones, size_drones, filename_drone);
         }
         if (select == 5)
         {
