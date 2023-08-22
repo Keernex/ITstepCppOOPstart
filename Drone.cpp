@@ -52,3 +52,29 @@ vector<Drone> Drone::removeDrone(vector<Drone> items, int index)
     }
     return items;
 }
+
+DroneSpace::DroneSpace()
+{
+    x = 0;
+    y = 0;
+    z = 0;
+}
+
+DroneSpace::DroneSpace(int x, int y, int z)
+{
+    this->x = x;
+    this->y = y;
+    this->z = z;
+}
+
+DroneSpace::~DroneSpace()
+{
+    x = 0;
+    y = 0;
+    z = 0;
+}
+
+void DroneSpace::print_DroneSpace()
+{
+    cout << "(" << x << "," << y << "," << z << ")" << endl;
+}

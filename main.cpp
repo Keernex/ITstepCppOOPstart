@@ -5,6 +5,7 @@ int main()
     DroneFile droneFile;
     DroneEngine droneEngine;
     Drone drone;
+    DroneSpace droneSpace;
 
     vector<Drone> drones;
     int size_drones = 0;

@@ -45,3 +45,44 @@ public:
     void printDrone();
     vector<Drone> removeDrone(vector<Drone> items, int index);
 };
+
+class DroneSpace
+{
+private:
+    int x;
+    int y;
+    int z;
+public:
+    DroneSpace();
+    DroneSpace(int x, int y, int z);
+    ~DroneSpace();
+
+    inline int getX() const { return x; }
+    inline int getY() const { return y; }
+    inline int getZ() const { return z; }
+
+    inline void setX(int x) { this->x = x; }
+    inline void setY(int y) { this->y = y; }
+    inline void setZ(int z) { this->z = z; }
+
+    void print_DroneSpace();
+};
+
+
+//class SharedObjectInGame 
+//{
+//    int x;//4
+//    int y;//4
+//};
+//class UniqueObjectInGame
+//{   
+//    Image image;
+//    string name;
+//    int level;
+//
+//};
+//class ObjectInGame
+//{    
+//    SharedObjectInGame * sharedObjectInGame = new SharedObjectInGame[100000000];
+//    UniqueObjectInGame uniqueObjectInGame;
+//};
