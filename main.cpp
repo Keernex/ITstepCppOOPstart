@@ -266,7 +266,6 @@ int main()
                 {
                     break;
                 }
-                getchar();
                 _getch();
             } while (true);
         }
