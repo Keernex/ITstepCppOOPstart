@@ -1,35 +1,45 @@
 #include "lib.h"
 
-class Student
+class Drone
 {
 private:
     string name;
-    string surname;
-    string father_name;
-    string date_birth;
-    string telephone;
-    string city;
-    string country;
-    string name_school;
+    string size;
+    string type;
+    string ready_model;
+    string max_speed;//km / h
+    string control_type;
+    string engine_type;
+    string charging_time;//hours
+    string flight_time; //minutes
+    string flight_height; // m
+    string weight;//g
 public:
-    Student();
-    Student(string name, string surname, string father_name, string date_birth, string telephone, string city, string country, string name_school);
+    Drone();
+    Drone(string name, string size, string type, string ready_model, string max_speed, string control_type, string engine_type, string charging_time, string flight_time, string flight_height, string weight);
 
-    string get_name();
-    string get_surname();
-    string get_father_name();
-    string get_date_birth();
-    string get_telephone();
-    string get_city();
-    string get_country();
-    string get_name_school();
+    inline string getName() const { return name; }
+    inline string getSize() const{ return size; }
+    inline string getType() const{ return type; }
+    inline string getReady_model() const{ return ready_model; }
+    inline string getMax_speed() const{ return max_speed; }
+    inline string getControl_type() const{ return control_type; }
+    inline string getEngine_type() const{ return engine_type; }
+    inline string getCharging_time() const{ return charging_time; }
+    inline string getFlight_time() const{ return flight_time; }
+    inline string getFlight_height() const{ return flight_height; }
+    inline string getWeight() const{ return weight; }
 
-    void set_name(string name);
-    void set_surname(string surname);
-    void set_father_name(string father_name);
-    void set_date_birth(string date_birth);
-    void set_telephone(string telephone);
-    void set_city(string city);
-    void set_country(string country);
-    void set_name_school(string name_school);
+    inline void setName(string name) { this->name = name; }
+    inline void setSize(string size) { this->size = size; }
+    inline void setType(string type) { this->type = type; }
+    inline void setReady_model(string ready_model) { this->ready_model = ready_model; }
+    inline void setMax_speed(string max_speed) { this->max_speed = max_speed; }
+    inline void setControl_type(string control_type) { this->control_type = control_type; }
+    inline void setEngine_type(string engine_type) { this->engine_type = engine_type; }
+    inline void setCharging_time(string charging_time) { this->charging_time = charging_time; }
+    inline void setFlight_time(string flight_time) { this->flight_time = flight_time; }
+    inline void setFlight_height(string flight_height) { this->flight_height = flight_height; }
+    inline void setWeight(string weight) { this->weight = weight; }
+
 };
