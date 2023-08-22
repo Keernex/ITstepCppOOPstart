@@ -46,6 +46,7 @@ public:
     vector<Drone> removeDrone(vector<Drone> items, int index);
 };
 
+
 class DroneSpace
 {
 private:
@@ -74,22 +75,3 @@ public:
 
     void print_DroneSpace();
 };
-
-
-//class SharedObjectInGame 
-//{
-//    int x;//4
-//    int y;//4
-//};
-//class UniqueObjectInGame
-//{   
-//    Image image;
-//    string name;
-//    int level;
-//
-//};
-//class ObjectInGame
-//{    
-//    SharedObjectInGame * sharedObjectInGame = new SharedObjectInGame[100000000];
-//    UniqueObjectInGame uniqueObjectInGame;
-//};
