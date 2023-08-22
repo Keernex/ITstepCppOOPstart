@@ -264,7 +264,7 @@ int main()
                 }
                 if (select == 7)
                 {
-                    break
+                    break;
                 }
                 getchar();
                 _getch();
