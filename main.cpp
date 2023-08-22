@@ -18,10 +18,10 @@ int main()
     do
     {
         system("cls");
-        cout << "1 - input point" << endl;
-        cout << "2 - print point" << endl;
-        cout << "3 - change point" << endl;
-        cout << "4 - delete point" << endl;
+        cout << "1 - input drone" << endl;
+        cout << "2 - print drone" << endl;
+        cout << "3 - change drone" << endl;
+        cout << "4 - delete drone" << endl;
         cout << "5 - end" << endl;
 
         int select;
@@ -114,10 +114,10 @@ int main()
             }
 
             int index;
-            cout << "input index point: ";
+            cout << "input index drone: ";
             while (!(std::cin >> index) || index < 0 || index > size_drones - 1)
             {
-                cout << "input index point: ";
+                cout << "input index drone: ";
                 cin.clear();
                 while (cin.get() != '\n')
                     continue;
@@ -189,10 +189,10 @@ int main()
             }
 
             int index;
-            cout << "input index point: ";
+            cout << "input index drone: ";
             while (!(std::cin >> index) || index < 0 || index > size_drones - 1)
             {
-                cout << "input index point: ";
+                cout << "input index drone: ";
                 cin.clear();
                 while (cin.get() != '\n')
                     continue;
